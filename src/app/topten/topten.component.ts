@@ -1,27 +1,29 @@
 import { Component } from '@angular/core';
+import { toptenmodel } from './interface';
 
 
 
 
-export interface PeriodicElement {
-  name: string;
+
+export interface CarElement {
   position: number;
-  weight: string;
-  symbol: number;
+  name: string;
+  model: string;
+  horsepower: number;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Tesla', weight: 'ModelX', symbol: 550},
-  {position: 2, name: 'Mercedes', weight: 'C class', symbol: 489},
-  {position: 3, name: 'BMW', weight: 'D550', symbol: 491},
-  {position: 4, name: 'Audi', weight: 'R8', symbol: 521},
-  {position: 5, name: 'Peugeot', weight: '5008', symbol: 264},
-  {position: 6, name: 'Renault', weight: 'Torzero', symbol: 541},
-  {position: 7, name: 'Volvo', weight: 'XC90', symbol: 220},
-  {position: 8, name: 'Dacia', weight: 'StepWay', symbol: 194},
-  {position: 9, name: 'Ferrari', weight: 'Forza', symbol: 541},
-  {position: 10, name: 'Porsche', weight: 'Cayman', symbol: 501},
-];
+const ELEMENT_DATA: CarElement[] = [
+  {position: 1, name: 'Tesla', model: 'ModelX', horsepower: 550},
+  {position: 2, name: 'Mercedes', model: 'C class', horsepower: 489},
+  {position: 3, name: 'BMW', model: 'D550', horsepower: 491},
+  {position: 4, name: 'Audi', model: 'R8', horsepower: 521},
+  {position: 5, name: 'Peugeot', model: '5008', horsepower: 264},
+  {position: 6, name: 'Renault', model: 'Torzero', horsepower: 541},
+  {position: 7, name: 'Volvo', model: 'XC90', horsepower: 220},
+  {position: 8, name: 'Dacia', model: 'StepWay', horsepower: 194},
+  {position: 9, name: 'Ferrari', model: 'Forza', horsepower: 541},
+  {position: 10, name: 'Porsche', model: 'Cayman', horsepower: 501},
+] as Array<toptenmodel>;
 
 
 
@@ -38,7 +40,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class ToptenComponent {
   
-displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+displayedColumns: string[] = ['position', 'name', 'model', 'horsepower'];
 dataSource = ELEMENT_DATA;
 
 }
