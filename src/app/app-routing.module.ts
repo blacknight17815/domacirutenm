@@ -16,7 +16,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'gallery', component: GalleryComponent},
     { path: 'topten', component: ToptenComponent},
-    { path: 'contact', component: ContactComponent}
+    { path: 'contact', component: ContactComponent},
+    { path: '**', redirectTo: 'home' ,   component: HomeComponent}
 
 
 ];
